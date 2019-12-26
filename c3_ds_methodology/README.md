@@ -49,3 +49,17 @@ Modeling:
 * Descriptive
 * Predictive   
 Using training and testing sets to evaluate these models   
+
+Evaluation:  
+After model building, we will test again on new validation data set prior to deployment. This allows assessment of the final model and gives us time to refine on whether the model actually addresses the original question.  
+* Diagnostic
+* Statistical Significance Testing  
+
+
+### Deployment and Feedback
+Making sure the tool is usable and understandable by the business team. It should be easy to use and preferably based in a browser as a web app.  
+As part of solution deployment, remember about processes and training. Also keep in mind of the feedback loop and how to refine the model with additional data over time.  
+  
+
+Ultimately, remember, the process must fit the problem.  
+  

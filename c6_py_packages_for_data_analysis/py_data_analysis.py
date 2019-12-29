@@ -1,5 +1,8 @@
 import pandas as pd 
 import numpy as np 
+import matplotlib.pyplot as plt 
+import seaborn as sns 
+
 
 df = pd.DataFrame({"a": [1,2,3,4,5], 
         "b": [2,4,np.nan,6,np.nan],
@@ -26,7 +29,7 @@ df = pd.concat([df, c_dummies], axis=1).drop("c", axis=1)
 
 # group by without a new index
 df = pd.DataFrame({"a": [1,2,3,4,5], 
-        "b": [2,4,np.nan,6,np.nan],
+        "b": [2,4,5,6,7],
         "c": ['gas', 'diesel', 'diesel', 'gas', 'gas']
     }
 )
@@ -37,4 +40,19 @@ df.groupby("c", as_index=False).mean()
 # set new index= and new columns=
 df.groupby("c", as_index=False).mean().pivot("c", "a")
 
+
+# regplots
+sns.regplot(x="a", y="b", data=df)
+
+# corr stats
+# pearsons r 
+
+# anova
+# F statistic
+
+
+## cars data set
+path='https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/DA0101EN/automobileEDA.csv'
+df = pd.read_csv(path)
+df.head()
 
